@@ -20,10 +20,28 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'name',
-        message: 'What is the name of your project? (Required)',
-        validate: nameInput => {
-            if (nameInput) {
+        name: 'email',
+        message: 'What is your email address?'
+    },
+    {
+        type: 'input',
+        name: 'link',
+        message: 'Please provide the link to the repository. (Required)',
+        validate: repoLink => {
+            if (repoLink) {
+                return true;
+            } else {
+                console.log('Please enter the repo URL!');
+                return false;
+            }
+        }
+    },
+    {
+        type: 'input',
+        name: 'title',
+        message: 'What is the title of your project? (Required)',
+        validate: titleInput => {
+            if (titleInput) {
                 return true;
             } else {
                 console.log('Please enter the project name!');
@@ -40,6 +58,12 @@ const questions = [
         type: 'input',
         name: 'install',
         message: 'Please provide installation instructions.'
+    },
+    {
+        type: 'checkbox',
+        name: 'languages',
+        message: 'What technologies were used to build this application?',
+        choices: ['JavaScript', 'HTML', 'CSS', 'Python', 'jQuery', 'React', 'Bootstrap', 'Node.js']
     },
     {
         type: 'input',
@@ -70,10 +94,23 @@ const questions = [
         }
     },
     {
+        type: 'confirm',
+        name: 'confirmLicense',
+        message: 'Would you like to include a license for your application?',
+        default: false
+    },
+    {
         type: 'list',
         name: 'license',
         message: 'Please choose the appropriate license for your application.',
-        choices: ['MIT', 'GNU GPLv3', 'Apache License 2.0', 'ISC License', 'Mozilla Public License 2.0', 'Unilicense']
+        choices: ['MIT', 'GNU GPLv3', 'Apache License 2.0', 'ISC License', 'Mozilla Public License 2.0', 'Unilicense'],
+        when: ({ confirmLicense }) => {
+            if (confirmLicense) {
+                return true;
+            } else {
+                return false;
+            }
+        }
     }
 ];
 
