@@ -1,13 +1,94 @@
 // TODO: Include packages needed for this application
+const inquirer = require('inquirer');
+const fs = require('fs');
+const generateMarkdown = require('./utils/generateMarkdown');
 
 // TODO: Create an array of questions for user input
-const questions = [];
+const questions = [
+    {
+        type: 'input',
+        name: 'username',
+        message: 'What is your GitHub username? (Required)',
+        validate: usernameInput => {
+            if (usernameInput) {
+                return true;
+            } else {
+                console.log('Please enter your username!');
+                return false;
+            }
+        }
+    },
+    {
+        type: 'input',
+        name: 'name',
+        message: 'What is the name of your project? (Required)',
+        validate: nameInput => {
+            if (nameInput) {
+                return true;
+            } else {
+                console.log('Please enter the project name!');
+                return false;
+            }
+        }
+    },
+    {
+        type: 'input',
+        name: 'description',
+        message: 'Please enter the description of your application.'
+    },
+    {
+        type: 'input',
+        name: 'install',
+        message: 'Please provide installation instructions.'
+    },
+    {
+        type: 'input',
+        name: 'usage',
+        message: 'Please provide instructions and examples for use.'
+    },
+    {
+        type: 'input',
+        name: 'contribute',
+        message: 'Please name all contributors to this application.'
+    },
+    {
+        type: 'confirm',
+        name: 'confirmTest',
+        message: 'Did you write tests for your application?',
+        default: false
+    }, 
+    {
+        type: 'input',
+        name: 'tests',
+        message: 'Please provide examples on how to run your tests',
+        when: ({ confirmTest }) => {
+            if (confirmTest) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    },
+    {
+        type: 'list',
+        name: 'license',
+        message: 'Please choose the appropriate license for your application.',
+        choices: ['MIT', 'GNU GPLv3', 'Apache License 2.0', 'ISC License', 'Mozilla Public License 2.0', 'Unilicense']
+    }
+];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    fs.writeFile('./Develop/README.md', data, (err) => {
+        if (err) throw err;
+        console.log('The README file has been created!')
+    });
+}
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    inquirer.prompt(questions);
+}
 
 // Function call to initialize app
 init();
