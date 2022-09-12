@@ -104,7 +104,7 @@ const questions = [
         type: 'list',
         name: 'license',
         message: 'Please choose the appropriate license for your application.',
-        choices: ['MIT', 'GNU GPLv3', 'Apache License 2.0', 'ISC License', 'Mozilla Public License 2.0', 'Unilicense'],
+        choices: ['MIT', 'GNU GPLv3', 'Apache License 2.0', 'Boost Software License 1.0', 'Mozilla Public License 2.0', 'Unilicense'],
         when: ({ confirmLicense }) => {
             if (confirmLicense) {
                 return true;
@@ -117,7 +117,7 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    return fs.writeFile(fileName, JSON.stringify(data), (err) => {
+    return fs.writeFile(fileName, data, (err) => {
         if (err) throw err;
         console.log('The README file has been created!')
     });

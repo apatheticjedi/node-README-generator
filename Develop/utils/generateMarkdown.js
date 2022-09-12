@@ -1,62 +1,110 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) { }
+function renderLicenseBadge(license) { 
+  if (!license) {
+    return "";
+  } else if (license === 'MIT') {
+    return `![badge](https://img.shields.io/badge/license-MIT-brightgreen)`;
+  } else if (license === 'GNU GPLv3') {
+    return `![badge](https://img.shields.io/badge/license-GNU%20GPLv3-brightgreen)`;
+  } else if (license === 'Apache License 2.0') {
+    return `![badge](https://img.shields.io/badge/license-Apache%20License%202.0-blue)`;
+  } else if (license === 'Boost Software License 1.0') {
+    return `![badge](https://img.shields.io/badge/license-Boost%20Software%20License%201.0-brightgreen)`;
+  } else if (license === 'Mozilla Public License 2.0') {
+    return `![badge](https://img.shields.io/badge/license-Mozilla%20Public%20License%202.0-brightgreen)`;
+  } else if (license === 'Unilicense') {
+    return `![badge](https://img.shields.io/badge/license-Unilicense-brightgreen)`;
+  } else {
+    return "";
+  }
+}
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) { }
+function renderLicenseLink(license) {
+  if (!license) {
+    return "";
+  } else if (license === 'MIT') {
+    return `[MIT](https://spdx.org/licenses/MIT.html)`;
+  } else if (license === 'GNU GPLv3') {
+    return `[GNU GPLv3](https://spdx.org/licenses/GPL-3.0-or-later.html)`;
+  } else if (license === 'Apache License 2.0') {
+    return `[Apache License 2.0](https://spdx.org/licenses/Apache-2.0.html)`;
+  } else if (license === 'Boost Software License 1.0') {
+    return `[Boost Software License 1.0](https://spdx.org/licenses/BSL-1.0.html)`;
+  } else if (license === 'Mozilla Public License 2.0') {
+    return `[Mozilla Public License 2.0](https://spdx.org/licenses/MPL-2.0.html)`;
+  } else if (license === 'Unilicense') {
+    return `[Unilicense](https://spdx.org/licenses/Unlicense.html)`;
+  } else {
+    return "";
+  }
+ }
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) { }
+function renderLicenseSection(license) { 
+  if (!license) {
+    return "";
+  } else {
+    return `
+## License
+
+${renderLicenseLink(license)}
+`
+  }
+}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
+  const license = data.license;
   return `
 <div id="top"></div>
 
-# <a href="${data.link}">${data.title}</a>
+${renderLicenseBadge(license)}
 
-<details>
-  <summary><strong>Table of Contents</strong></summary>
-  <ol>
-    <li><a href="#description">Description</a></li>
-    <li><a href="#languages">Built With</a></li>
-    <li><a href="#install">Installation Instructions</a></li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#contributors">Contributors</a></li>
-    <li><a href="#tests">Tests</a></li>
-    <li><a href="#questions">Questions</a></li>
-  </ol>
-</details>
+# [${data.title}](${data.link})
 
-## <p id="description">Description</p>
+### Table of Contents
+
+1. [Description](#description)
+2. [Built With](#built-with)
+3. [Installation Instructions](#installation-instructions)
+4. [Usage](#usage)
+5. [Contributors](#contributors)
+6. [Tests](#tests)
+7. [Questions](#questions)
+
+## Description
 ${data.description}
 
-### <p id="languages">Built With</p>
-${data.languages}
+### Built With
+${data.languages} 
 
-### <p id="install">Installation Instructions</p>
+## Installation Instructions
 ${data.install}
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-### <p id="usage">Usage</p>
+## Usage
 ${data.usage}
 
-### <p id="contributors">Contributors</p>
+## Contributors
 ${data.contribute}
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-### <p id="tests">Tests</p>
+## Tests
 ${data.tests}
 
-### <p id="questions">Questions</p>
+## Questions
 Reach out to me with questions by email at:
-<a href="mailto:${data.email}">${data.email}</a>
+<${data.email}>
 
-<a href="https://github.com/${data.username}">${data.username}</a>
+[GitHub](https://github.com/${data.username})
+
+${renderLicenseSection(license)}
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 `;

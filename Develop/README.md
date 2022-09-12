@@ -1,1 +1,52 @@
-"\n<div id=\"top\"></div>\n\n# <a href=\"foo\">bar</a>\n\n<details>\n  <summary><strong>Table of Contents</strong></summary>\n  <ol>\n    <li><a href=\"#description\">Description</a></li>\n    <li><a href=\"#languages\">Built With</a></li>\n    <li><a href=\"#install\">Installation Instructions</a></li>\n    <li><a href=\"#usage\">Usage</a></li>\n    <li><a href=\"#contributors\">Contributors</a></li>\n    <li><a href=\"#tests\">Tests</a></li>\n    <li><a href=\"#questions\">Questions</a></li>\n  </ol>\n</details>\n\n## <p id=\"description\">Description</p>\nfoo\n\n### <p id=\"languages\">Built With</p>\nJavaScript\n\n### <p id=\"install\">Installation Instructions</p>\nbar\n\n<p align=\"right\">(<a href=\"#top\">back to top</a>)</p>\n\n### <p id=\"usage\">Usage</p>\nfoo\n\n### <p id=\"contributors\">Contributors</p>\nbar\n\n<p align=\"right\">(<a href=\"#top\">back to top</a>)</p>\n\n### <p id=\"tests\">Tests</p>\nundefined\n\n### <p id=\"questions\">Questions</p>\nReach out to me with questions by email at:\n<a href=\"mailto:foo\">foo</a>\n\n<a href=\"https://github.com/foo\">foo</a>\n\n<p align=\"right\">(<a href=\"#top\">back to top</a>)</p>\n"
+
+<div id="top"></div>
+
+![badge](https://img.shields.io/badge/license-MIT-brightgreen)
+
+# [Portfolio Generator](https://github.com/apatheticjedi/portfolio-generator)
+
+### Table of Contents
+
+1. [Description](#description)
+2. [Built With](#built-with)
+3. [Installation Instructions](#installation-instructions)
+4. [Usage](#usage)
+5. [Contributors](#contributors)
+6. [Tests](#tests)
+7. [Questions](#questions)
+
+## Description
+This is an application to quickly generate a portfolio using project repositories from GitHub
+
+### Built With
+JavaScript,HTML,CSS,Node.js 
+
+## Installation Instructions
+Clone the repo then install inquirer in the root directory to use. Run 'npm i inquirer@8.2.4' at the command line.
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## Usage
+At the command line, run 'node app' then answer the questions when prompted. Be sure to include correct repo links and GitHub username for correct functionality. Once complete, the app will automatically generate an HTML file using the username entered. 
+
+## Contributors
+apatheticjedi
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## Tests
+undefined
+
+## Questions
+Reach out to me with questions by email at:
+<thedudeabides1981@hotmail.com>
+
+[GitHub](https://github.com/apatheticjedi)
+
+
+## License
+
+[MIT](https://spdx.org/licenses/MIT.html)
+
+
+<p align="right">(<a href="#top">back to top</a>)</p>
