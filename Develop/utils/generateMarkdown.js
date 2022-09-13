@@ -18,7 +18,7 @@ function renderLicenseBadge(license) {
   } else {
     return "";
   }
-}
+};
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
@@ -26,7 +26,7 @@ function renderLicenseLink(license) {
   if (!license) {
     return "";
   } else if (license === 'MIT') {
-    return `[MIT](https://spdx.org/licenses/MIT.html)`;
+    return `[MIT License](https://spdx.org/licenses/MIT.html)`;
   } else if (license === 'GNU GPLv3') {
     return `[GNU GPLv3](https://spdx.org/licenses/GPL-3.0-or-later.html)`;
   } else if (license === 'Apache License 2.0') {
@@ -40,7 +40,7 @@ function renderLicenseLink(license) {
   } else {
     return "";
   }
- }
+ };
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
@@ -54,15 +54,46 @@ function renderLicenseSection(license) {
 ${renderLicenseLink(license)}
 `
   }
-}
+};
+
+// generate a list of all languages chosen
+function languageList(languages){
+  let languageList = "";
+  languages.forEach(language => {
+   languageList += `
+* ${language}`
+  })
+  return languageList;
+};
+
+// generate text for Tests section, if none input, return an empty string
+function renderTestsText(tests) {
+  if (!tests) {
+    return "";
+  } else {
+    return tests;
+  }
+};
+
+// create a section for Tests, if none input, return an empty string
+function renderTestsSection(tests) {
+  if (!tests) {
+    return "";
+  } else {
+    return `
+## Tests
+
+${renderTestsText(tests)}
+`
+  }
+};
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  const license = data.license;
   return `
 <div id="top"></div>
 
-${renderLicenseBadge(license)}
+${renderLicenseBadge(data.license)}
 
 # [${data.title}](${data.link})
 
@@ -77,34 +108,39 @@ ${renderLicenseBadge(license)}
 7. [Questions](#questions)
 
 ## Description
+
 ${data.description}
 
 ### Built With
-${data.languages} 
+
+${languageList(data.languages)} 
 
 ## Installation Instructions
+
 ${data.install}
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Usage
+
 ${data.usage}
 
 ## Contributors
+
 ${data.contribute}
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-## Tests
-${data.tests}
+${renderTestsSection(data.tests)}
 
 ## Questions
+
 Reach out to me with questions by email at:
 <${data.email}>
 
 [GitHub](https://github.com/${data.username})
 
-${renderLicenseSection(license)}
+${renderLicenseSection(data.license)}
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 `;
