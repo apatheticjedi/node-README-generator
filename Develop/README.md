@@ -3,7 +3,7 @@
 
 ![badge](https://img.shields.io/badge/license-MIT-brightgreen)
 
-# [afaf](fafa)
+# [Example Project](examplelink)
 
 ### Table of Contents
 
@@ -17,7 +17,7 @@
 
 ## Description
 
-afaf
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris finibus augue ac mollis tempor. Integer.
 
 ### Built With
 
@@ -33,17 +33,17 @@ afaf
 
 ## Installation Instructions
 
-fafa
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris finibus augue ac mollis tempor. Integer.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Usage
 
-afafa
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris finibus augue ac mollis tempor. Integer.
 
 ## Contributors
 
-fafaf
+apatheticjedi
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -52,9 +52,9 @@ fafaf
 ## Questions
 
 Reach out to me with questions by email at:
-<fafa>
+<>
 
-[GitHub](https://github.com/afaf)
+[GitHub](https://github.com/apatheticjedi)
 
 
 ## License
