@@ -1,9 +1,9 @@
 
 <div id="top"></div>
 
-![badge](https://img.shields.io/badge/license-MIT-brightgreen)
+![badge](https://img.shields.io/badge/license-Apache%20License%202.0-blue)
 
-# [README Generator](https://github.com/apatheticjedi/node-README-generator)
+# [fa](fa)
 
 ### Table of Contents
 
@@ -17,27 +17,33 @@
 
 ## Description
 
-This is a Node.js application that generates a professional README.md file using data input by the user answering a series of questions about the project. It uses the Inquirer npm to generate questions on the command line.
+fa
 
 ### Built With
 
 
 * JavaScript
+* HTML
+* CSS
+* Python
+* jQuery
+* React
+* Bootstrap
 * Node.js 
 
 ## Installation Instructions
 
-Clone the repo to your directory, install inquirer npm in the root directory with 'npm i inquirer@8.2.4'
+fa
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Usage
 
-On the command line in the root directory, type 'node index' to start the program, then answer all the questions regarding your application. Once completed, a 'README.md' file will be generated in the '/Develop' directory.
+fa
 
 ## Contributors
 
-apatheticjedi
+fa
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -46,14 +52,14 @@ apatheticjedi
 ## Questions
 
 Reach out to me with questions by email at:
-<david@email.com>
+<fa>
 
-[GitHub](https://github.com/apatheticjedi)
+[GitHub](https://github.com/fa)
 
 
 ## License
 
-[MIT License](https://spdx.org/licenses/MIT.html)
+[Apache License 2.0](https://spdx.org/licenses/Apache-2.0.html)
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
