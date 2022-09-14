@@ -1,49 +1,43 @@
 
 <div id="top"></div>
 
-![badge](https://img.shields.io/badge/license-MIT-brightgreen)
+![badge](https://img.shields.io/badge/license-Mozilla%20Public%20License%202.0-brightgreen)
 
-# [Example Project](examplelink)
+# [Example Project](https://github.com/apatheticjedi/node-README-generator)
 
 ### Table of Contents
 
 1. [Description](#description)
 2. [Built With](#built-with)
-3. [Installation Instructions](#installation-instructions)
+3. [Installation](#installation)
 4. [Usage](#usage)
-5. [Contributors](#contributors)
+5. [Contributing](#contributing)
 6. [Tests](#tests)
 7. [Questions](#questions)
 
 ## Description
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris finibus augue ac mollis tempor. Integer.
+This is an example of a description
 
 ### Built With
 
 
 * JavaScript
-* HTML
-* CSS
-* Python
-* jQuery
-* React
-* Bootstrap
 * Node.js 
 
-## Installation Instructions
+## Installation
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris finibus augue ac mollis tempor. Integer.
+This is how you would install the application
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Usage
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris finibus augue ac mollis tempor. Integer.
+This is how you would use the application
 
-## Contributors
+## Contributing
 
-apatheticjedi
+This is how you would contribute to the application
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -52,14 +46,14 @@ apatheticjedi
 ## Questions
 
 Reach out to me with questions by email at:
-<>
+<example@email.com>
 
 [GitHub](https://github.com/apatheticjedi)
 
 
 ## License
 
-[MIT License](https://spdx.org/licenses/MIT.html)
+[Mozilla Public License 2.0](https://spdx.org/licenses/MPL-2.0.html)
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>

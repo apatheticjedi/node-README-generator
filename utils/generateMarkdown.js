@@ -101,9 +101,9 @@ ${renderLicenseBadge(data.license)}
 
 1. [Description](#description)
 2. [Built With](#built-with)
-3. [Installation Instructions](#installation-instructions)
+3. [Installation](#installation)
 4. [Usage](#usage)
-5. [Contributors](#contributors)
+5. [Contributing](#contributing)
 6. [Tests](#tests)
 7. [Questions](#questions)
 
@@ -115,7 +115,7 @@ ${data.description}
 
 ${languageList(data.languages)} 
 
-## Installation Instructions
+## Installation
 
 ${data.install}
 
@@ -125,7 +125,7 @@ ${data.install}
 
 ${data.usage}
 
-## Contributors
+## Contributing
 
 ${data.contribute}
 

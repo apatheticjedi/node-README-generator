@@ -74,7 +74,7 @@ const questions = [
     {
         type: 'input',
         name: 'contribute',
-        message: 'Please name all contributors to this application.'
+        message: 'Please describe contribution guidelines for this application.'
     },
     {
         type: 'confirm',

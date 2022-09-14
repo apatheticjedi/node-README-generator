@@ -8,31 +8,40 @@
 
 1. [Description](#description)
 2. [Built With](#built-with)
-3. [Installation Instructions](#installation-instructions)
+3. [Installation](#installation)
 4. [Usage](#usage)
-5. [Contributors](#contributors)
+5. [Contributing](#contributing)
 6. [Questions](#questions)
 
 ## Description
 
-This is a Node.js application that generates a professional README.md file using data input by the user answering a series of questions about the project. It uses the Inquirer npm to generate questions on the command line.
+This is a Node.js application that generates a professional README.md file using data input by the user answering a series of questions about the project. It uses the Inquirer npm to generate questions on the command line, then generates a markdown file with this information included.
 
 ### Built With
 
 * JavaScript
 * Node.js 
 
-## Installation Instructions
+## Installation
 
-Clone the repo to your directory, install inquirer npm in the root directory with 'npm i inquirer@8.2.4'
+Clone the repo to your directory, then install [inquirer npm](https://www.npmjs.com/package/inquirer) in the root directory with:
+```
+npm i inquirer@8.2.4
+```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Usage
 
-On the command line in the root directory, type 'node index' to start the program, then answer all the questions regarding your application. Once completed, a 'README.md' file will be generated in the './Develop' directory.
+On the command line in the root directory, type:
+```
+node index
+``` 
+to start the program, then answer all the questions regarding your application. Once completed, a 'README.md' file will be generated in the './Develop' directory.
 
-## Contributors
+[Walkthrough Video](https://youtu.be/eS_sG_yqJ_Q)
+
+## Contributing
 
 [apatheticjedi](https://github.com/apatheticjedi)
 
