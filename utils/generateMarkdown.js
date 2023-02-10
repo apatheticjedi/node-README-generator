@@ -1,4 +1,4 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
+// function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) { 
   if (!license) {
@@ -20,7 +20,7 @@ function renderLicenseBadge(license) {
   }
 };
 
-// TODO: Create a function that returns the license link
+// function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   if (!license) {
@@ -42,7 +42,7 @@ function renderLicenseLink(license) {
   }
  };
 
-// TODO: Create a function that returns the license section of README
+// function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) { 
   if (!license) {
@@ -88,7 +88,16 @@ ${renderTestsText(tests)}
   }
 };
 
-// TODO: Create a function to generate markdown for README
+// create bullet in table of contents for tests
+function renderTestBullet(tests) {
+  if (!tests) {
+    return "";
+  } else {
+    return `6. [Tests](#tests)`
+  }
+};
+
+// generate markdown for README
 function generateMarkdown(data) {
   return `
 <div id="top"></div>
@@ -104,7 +113,7 @@ ${renderLicenseBadge(data.license)}
 3. [Installation](#installation)
 4. [Usage](#usage)
 5. [Contributing](#contributing)
-6. [Tests](#tests)
+${renderTestBullet(data.tests)}
 7. [Questions](#questions)
 
 ## Description
@@ -135,8 +144,10 @@ ${renderTestsSection(data.tests)}
 
 ## Questions
 
-Reach out to me with questions by email at:
+Reach out to me with questions at:
 <${data.email}>
+
+[LinkedIn](https://www.linkedin.com/in/${data.linkedin}/)
 
 [GitHub](https://github.com/${data.username})
 

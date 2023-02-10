@@ -26,6 +26,11 @@ const questions = [
     },
     {
         type: 'input',
+        name: 'linkedin',
+        message: 'What is your LinkedIn username'
+    },
+    {
+        type: 'input',
         name: 'link',
         message: 'Please provide the link to the repository. (Required)',
         validate: repoLink => {
@@ -64,7 +69,7 @@ const questions = [
         type: 'checkbox',
         name: 'languages',
         message: 'What technologies were used to build this application?',
-        choices: ['JavaScript', 'HTML', 'CSS', 'Python', 'jQuery', 'React', 'Bootstrap', 'Node.js']
+        choices: ['JavaScript', 'HTML', 'CSS', 'Python', 'jQuery', 'React.js', 'Bootstrap', 'MD Bootstrap','Node.js', 'Express.js', 'MySQL','MongoDB', 'Mongoose', 'GraphQL', 'Apollo Server', 'Jest.js']
     },
     {
         type: 'input',
