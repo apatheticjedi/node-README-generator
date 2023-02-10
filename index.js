@@ -1,10 +1,10 @@
-// TODO: Include packages needed for this application
+// packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown');
 
 
-// TODO: Create an array of questions for user input
+// array of questions for user input
 const questions = [
     {
         type: 'input',
@@ -69,7 +69,7 @@ const questions = [
         type: 'checkbox',
         name: 'languages',
         message: 'What technologies were used to build this application?',
-        choices: ['JavaScript', 'HTML', 'CSS', 'Python', 'jQuery', 'React.js', 'Bootstrap', 'MD Bootstrap','Node.js', 'Express.js', 'MySQL','MongoDB', 'Mongoose', 'GraphQL', 'Apollo Server', 'Jest.js']
+        choices: ['JavaScript', 'HTML', 'CSS', 'Python', 'jQuery', 'React.js', 'Handlebars.js', 'Bootstrap', 'MD Bootstrap','Node.js', 'Express.js', 'MySQL', 'Sequelize', 'MongoDB', 'Mongoose', 'GraphQL', 'Apollo Server', 'Jest.js']
     },
     {
         type: 'input',
@@ -120,7 +120,7 @@ const questions = [
     }
 ];
 
-// TODO: Create a function to write README file
+// function to write README file
 function writeToFile(fileName, data) {
     return fs.writeFile(fileName, data, (err) => {
         if (err) throw err;
@@ -128,7 +128,7 @@ function writeToFile(fileName, data) {
     });
 };
 
-// TODO: Create a function to initialize app
+// function to initialize app
 function init() {
     return inquirer.prompt(questions)
     .then((answers) => {
@@ -137,5 +137,5 @@ function init() {
     });
 }
 
-// Function call to initialize app
+// function call to initialize app
 init();
